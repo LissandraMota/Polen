@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="jquery-3.5.1.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <title>Ongs Polinizadoras</title>
+</head>
+
+<body class="card-body">
+
+    <h1>Ongs Polinizadoras</h1>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    <button id="btn-modal" type="button">
+        Nova Ong
+    </button>
+
+    <table id="table-ongs" class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th scope="col">Nome</th>
+                <th scope="col">Slogan</th>
+                <th scope="col">Link Site</th>
+                <th scope="col">Ativo</th>
+                <th scope="col">Configuração</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <!--Modal inserir dados-->
+    <div class="modal fade" id="modal-inserir" tabindex="-1" aria-labelledby="modal-inserir-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Insira uma ONG</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="name" class="col-form-label">Name:</label>
+                    <input type="text" id="name" class="form-control">
+
+                    <label for="slogan" class="col-form-label">Slogan:</label>
+                    <input type="text" id="slogan" class="form-control">
+
+                    <label for="site" class="col-form-label">Link Site:</label>
+                    <input type="text" id="site" class="form-control">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-inserir" class="btn btn-primary" data-dismiss="modal">Inserir</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Modal editar-->
+    <div class="modal fade" id="modal-editar" tabindex="-1" aria-labelledby="modal-editar-label" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-title">Editar uma ONG</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <label for="id" class="col-form-label">ID:</label>
+                    <input type="text" id="id" readonly="true" class="form-control">
+
+                    <label for="name" class="col-form-label">Name:</label>
+                    <input type="text" id="name" class="form-control">
+
+                    <label for="slogan" class="col-form-label">Slogan:</label>
+                    <input type="text" id="slogan" class="form-control">
+
+                    <label for="site" class="col-form-label">Link Site:</label>
+                    <input type="text" id="site" class="form-control">
+
+                    <label for="ativo" class="col-form-label">Ativo:</label>
+                    <input id='ativo' type='checkbox' aria-label='Marque'>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" id="btn-editar" class="btn btn-primary" data-dismiss="modal">
+                        Editar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
